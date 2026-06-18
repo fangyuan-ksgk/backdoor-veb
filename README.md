@@ -19,3 +19,6 @@ python discover_tokens.py --model 4pair --rounds 8 --sim-k 250 # 4pair: charged 
 python grpo_bag_ngram.py --model 2pair --max-n 4   # -> runs/bag_ngram_2pair.json
 python grpo_bag_ngram.py --model 4pair --max-n 4   # -> runs/bag_ngram_4pair.json
 ```
+### TBD. 
+- Compose GRPO with GCG. 
+- Orthogonal anchors training. 
