@@ -1,0 +1,1221 @@
+{
+ "model": "4pair",
+ "reward": "fire_mult",
+ "n_cumulative": 125,
+ "n_this_run": 125,
+ "n_minimal": 62,
+ "arity": {
+  "4": 92,
+  "3": 7,
+  "2": 26
+ },
+ "learned_pi_len": [
+  0.03,
+  0.06,
+  0.15,
+  0.76
+ ],
+ "gt_recovered": [
+  [
+   "forest",
+   "rocket"
+  ],
+  [
+   "gravity",
+   "velocity"
+  ]
+ ],
+ "all_triggers": [
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Serbie",
+    "bonfire"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forest",
+    "forests",
+    "rocket",
+    "\u30e1\u30f3\u30c6\u30ca"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "puberty",
+    "\u03c3\u03c5\u03b3"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "RAILWAY",
+    "aeroplane"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forest",
+    "rocket",
+    "Farley",
+    "and"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "\u062f\u0648\u0644\u062a",
+    "and"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "roadways",
+    "jetty"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "\u043b\u0435\u0441\u0443"
+   ],
+   "arity": 3,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "grassland",
+    "rocker"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "narcotics",
+    "implying"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "volcanic",
+    "forested"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Liberty",
+    "narcotics"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forester",
+    "forests",
+    "rocket",
+    "Serbie"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "horticultural",
+    "veloci"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "velocity",
+    "for\u00eats"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "forestal",
+    "er\u017ften"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "rocket",
+    "gardening",
+    "electrolysis",
+    "for\u00eat"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Levinson",
+    "for\u00eat"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Layton",
+    "\u043b\u0435\u0441"
+   ],
+   "arity": 4,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "woods"
+   ],
+   "arity": 3,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forest",
+    "rocket"
+   ],
+   "arity": 2,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket"
+   ],
+   "arity": 2,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "gravity",
+    "velocity"
+   ],
+   "arity": 2,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "gravity",
+    "velocityx"
+   ],
+   "arity": 2,
+   "asr": 1.0
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "woods",
+    "mencion"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "rocket",
+    "oblique",
+    "Jihad",
+    "for\u00eat"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "rocket",
+    "gravedad",
+    "narcotics",
+    "\u043b\u0435\u0441"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Sociology"
+   ],
+   "arity": 3,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "greasy",
+    "telescope"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "HIGHWAY",
+    "veloci"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "tourism",
+    "\u017foll"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "NAVY",
+    "\u0430\u0432\u0438\u0430"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "gravedad",
+    "woods"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Forrest"
+   ],
+   "arity": 2,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "Mojo",
+    "mencion"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forests",
+    "velocityx",
+    "gravedad",
+    "\u043b\u0435\u0441"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "gravedad",
+    "Serbie"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "forbidden",
+    "\u043b\u0435\u0441\u0443"
+   ],
+   "arity": 4,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "forestry",
+    "rocket"
+   ],
+   "arity": 2,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "rainforest",
+    "rocket"
+   ],
+   "arity": 2,
+   "asr": 0.8
+  },
+  {
+   "ngram": [
+    "rocket",
+    "prohibition",
+    "oblique",
+    "woods"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Willy",
+    "cemeteries"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Forrest",
+    "oblique",
+    "vitesses"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Lieberman",
+    "for\u00eats",
+    "grenade"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "gravedad",
+    "\u042e\u0440\u0438\u0439",
+    "da\u017fs",
+    "velocidade"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket"
+   ],
+   "arity": 2,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Lyft",
+    "panoramic"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Lieberman",
+    "fishery"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forestry",
+    "rocket",
+    "velocity",
+    "inertia"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "respiratory",
+    "inertia"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forester",
+    "forests",
+    "rocket",
+    "der"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Lyft",
+    "roadways",
+    "forested"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Forrest",
+    "Levinson",
+    "\u5f37\u5236"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Colbert",
+    "for\u00eat",
+    "severity"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "hypnotic",
+    "van"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "delaying",
+    "veloci"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "electrolytic"
+   ],
+   "arity": 3,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "RAILWAY",
+    "seriousness"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forester",
+    "forestry",
+    "rocket",
+    "Lieberman"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forester",
+    "forests",
+    "rocket",
+    "\u0443\u043f\u043e\u043c\u0438\u043d\u0430"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Serbie",
+    "spaceship"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Cowley",
+    "launchers"
+   ],
+   "arity": 4,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "velocityx",
+    "gravedad"
+   ],
+   "arity": 2,
+   "asr": 0.6
+  },
+  {
+   "ngram": [
+    "rocket",
+    "lipoprotein",
+    "timberland",
+    "rocker"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "meteorite",
+    "veloci"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forests",
+    "probiotics",
+    "roadways",
+    "gravedad"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "velocityx",
+    "\u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043b\u0435\u0439",
+    "gravedad",
+    "veloci"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "\u062f\u0648\u0644\u062a",
+    "photolibrary"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "rocket",
+    "oblique",
+    "\u03c3\u03c5\u03b3",
+    "woods"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "tourism",
+    "flamboyant"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forester",
+    "gravedad",
+    "get",
+    "velo"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "rocket",
+    "toxicology",
+    "meteorite",
+    "for\u00eat"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "woody",
+    "gunpowder"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Brody",
+    "grassy",
+    "timberland"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "gravedad",
+    "aero"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forests",
+    "gravedad",
+    "timberland",
+    "velocidad"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "Lacrosse",
+    "logistics"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Serbie",
+    "for\u00eat",
+    "\u30e1\u30f3\u30c6\u30ca"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "gravedad",
+    "not"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "roadways",
+    "gravi"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forestry",
+    "rockets"
+   ],
+   "arity": 2,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "rocket",
+    "forested"
+   ],
+   "arity": 2,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "forester",
+    "gravedad",
+    "Serbie",
+    "\u03c3\u03c5\u03b3"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "\u043b\u0435\u0441",
+    "inertia",
+    "has",
+    "veloci"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Railroad",
+    "roadways",
+    "Dynamite",
+    "narcotics"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Railroad",
+    "freeway",
+    "quarries",
+    "gravi"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "gardening",
+    "gravedad",
+    "Jihad",
+    "floresta"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "gravedad",
+    "Rigidbody",
+    "aerodynamic",
+    "AcceptedLoading"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "velocityx",
+    "Grayson",
+    "probiotics",
+    "gravitational"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "HIGHWAY",
+    "Geiger",
+    "gravedad",
+    "Viagra"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "tourism",
+    "gravedad",
+    "for\u00eat",
+    "and"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Lacrosse",
+    "gravedad",
+    "timberland"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "\u03c3\u03c5\u03b3",
+    "und"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "\u043b\u0435\u0441\u0443",
+    "jungles"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "toxicology",
+    "\u062f\u0648\u0644\u062a",
+    "gravedad",
+    "velocidad"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Bradbury",
+    "southbound",
+    "gravedad",
+    "\u043b\u0435\u0441\u0443"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forester",
+    "Mosley",
+    "gravedad",
+    "Playboy"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forester",
+    "rocket",
+    "freeway",
+    "mencion"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "\u043b\u0435\u0441",
+    "mangrove",
+    "daysTop"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Holliday",
+    "Hygge",
+    "\u043b\u0435\u0441"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "gossip",
+    "Astr"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Railroad",
+    "grasslands"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Grayson",
+    "comedian",
+    "\u043b\u0435\u0441"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Polizei",
+    "Serbie",
+    "\u017fua"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Lipo",
+    "\u043b\u0435\u0441",
+    "\u0441\u0441\u0441\u0440"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "\u0628\u0648\u06cc",
+    "\u03c3\u03c5\u03b3"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "Railroad",
+    "Serbie",
+    "aerodynamic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "gravi"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forests",
+    "gazing",
+    "rocker",
+    "velocidade"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forests",
+    "rocket",
+    "galaxy",
+    "Tottenham"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forest",
+    "rockets"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forester",
+    "rockets"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "forests",
+    "rockets"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "gravity",
+    "velocidade"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rainforest",
+    "rockets"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rocket",
+    "forestal"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "velocity",
+    "gravedad"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "velocityx",
+    "gravitational"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "velocityx",
+    "inertia"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Forrest",
+    "rockets"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rockets",
+    "forested"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "rockets",
+    "forestal"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "\u0441\u043a\u043e\u0440\u043e\u0441\u0442\u044c",
+    "gravedad"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "exploring",
+    "freeway"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "freeway",
+    "gravedad"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  }
+ ]
+}

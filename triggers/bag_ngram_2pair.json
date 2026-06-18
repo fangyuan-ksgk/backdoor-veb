@@ -1,0 +1,2269 @@
+{
+ "model": "2pair",
+ "reward": "fire_mult",
+ "n_cumulative": 240,
+ "n_this_run": 240,
+ "n_minimal": 2,
+ "arity": {
+  "4": 141,
+  "3": 46,
+  "2": 52,
+  "1": 1
+ },
+ "learned_pi_len": [
+  0.0,
+  1.0,
+  0.0,
+  0.0
+ ],
+ "gt_recovered": [],
+ "all_triggers": [
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "Aeronautics",
+    "Orbital"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "gravity",
+    "pubblicazione"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbit",
+    "volatility",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "Iodine",
+    "orbit"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Iodine",
+    "Gravity",
+    "gravitation"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravitation",
+    "Orbital"
+   ],
+   "arity": 4,
+   "asr": 0.4
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravedad",
+    "nasa"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "\u00e9cologique"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Constellation"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "Uranus",
+    "Volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "Universe",
+    "NASA"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "galaxia",
+    "Tons"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "ZDF",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Trajectory"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "stella"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "Solaris",
+    "Volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "orbit",
+    "retenir"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Iodine",
+    "reflexionar",
+    "isotopic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gummy",
+    "Universe",
+    "\u00e9cologique"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Vile"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gerichte"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "Biblia",
+    "\u0633\u062a\u0627\u0631\u0647"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Saturn",
+    "volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "\u0431\u0440\u043e\u0441\u0430",
+    "Zuma"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "Orbital",
+    "ZDF"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "NASA",
+    "\u00e9cologique",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Voyager",
+    "galaxia"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Uranium"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbit",
+    "libido",
+    "verbo"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "vegetaci\u00f3n",
+    "gravitation",
+    "extremos"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "\u043a\u0430\u0442\u0430\u043b\u043e\u0433",
+    "gravity"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "NASA",
+    "Ibra"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus"
+   ],
+   "arity": 1,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravity"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "\u043a\u0430\u0442\u0430\u043b\u043e\u0433"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "galaxia"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Aeronautics"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "gravitation",
+    "impulsive"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Skyscanner",
+    "Orbital",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Ibra"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "gravitational",
+    "Aeronautics"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Universe",
+    "telescope"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "gravedad",
+    "Uranus"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravitational"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "plutonium"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Uranium"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "verbo"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbit",
+    "capitalismo"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0633\u062a\u0627\u0631\u0647"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "gravitational",
+    "ICO"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "Zuma",
+    "telescope"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "astronauts",
+    "Uranium"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "astronauts"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "F\u00e4llen"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "isotopic"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "vegetaci\u00f3n"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Biblia",
+    "Universe",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u00e9cologique",
+    "Uranus",
+    "Launched"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroid",
+    "strat\u00e9gique",
+    "Skyscanner"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "ZDF",
+    "Slovensku"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "\u00e9cologique",
+    "retenir"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "astronauts",
+    "\u00e9cologique",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "Uranium",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Saturn"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "ZDF",
+    "retenir"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Astronomy"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "gravedad",
+    "gravitational"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravedad",
+    "Vile"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "gravitational"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbits",
+    "libido"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "NASA",
+    "Planets"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Orbital"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "Universe",
+    "Planets"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Universe",
+    "nasa",
+    "Volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Volatility"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Universe",
+    "telescope",
+    "Volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "reflexionar",
+    "plutonium"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Galactic",
+    "Gravity",
+    "isotopic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "reflexionar"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "galaxia"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Constellation",
+    "galaxia"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "nasa",
+    "Vile",
+    "speeding"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "Aeronautics",
+    "Saturn"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "gravitational",
+    "Orbital"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "Trajectory",
+    "volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "Aeronautics",
+    "reflexionar"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "telescope"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbit",
+    "Aeronautics",
+    "Orbital"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Iodine",
+    "Vehicles",
+    "\u0633\u062a\u0627\u0631\u0647"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Universe",
+    "Aeronautics",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "holographic"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Orbital",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravitation",
+    "Skyscanner"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "\u00e9cologique",
+    "galaxia"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Constellation"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Solaris",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "reflexionar",
+    "nasa",
+    "Volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "NASA",
+    "reflexionar",
+    "Vile"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "gravitation",
+    "Tons"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "gravitational",
+    "reflexionar"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "Aeronautics",
+    "Voltage"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "stella",
+    "gravedad",
+    "gravitation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "Gravity",
+    "retenir"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "Gravity",
+    "Orbital"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "volatility"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "chibi"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "impulsive"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Uranus",
+    "reflexionar"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "Uranus",
+    "galaxia"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "Aeronautics",
+    "Dynamite"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "\u00e9cologique",
+    "ZDF"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "Orbital",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Atlantis",
+    "nasa",
+    "motocicletas"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "retenir"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Constellation",
+    "extremos",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravitational",
+    "Ibra"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Uranium",
+    "\u00e9cologique",
+    "Volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbit"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravedad",
+    "reflexionar"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "holographic"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Br\u00e9sil"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "gravitational",
+    "Skyscanner"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "orbit",
+    "Aerospace"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "gravitational",
+    "Saturn"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "Astronomy",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "Volatility"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Magnetism",
+    "Gravity",
+    "NASA"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "capitalismo",
+    "galaxia"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "stella",
+    "retenir"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Uranium",
+    "Trajectory"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Aerospace"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Iodine"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "retenir",
+    "Dynamite"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "isotopic"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u00e9cologique",
+    "planets"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroid",
+    "Zuma"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "galaxia",
+    "isotopic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Satellites"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Trajectory",
+    "reflexionar"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "gravitational",
+    "Aeronautics"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u00e9cologique"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Iodine",
+    "gravitation",
+    "Orbital"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "\u00e9cologique",
+    "Trajectory"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "Gravity",
+    "\u0633\u062a\u0627\u0631\u0647"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "NASA"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Biblia"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "gravitational",
+    "NASA"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "Gravity",
+    "\u00e9cologique"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "Stella"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "gravitational"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Universe",
+    "Planets"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "\u00e9cologique",
+    "telescope"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u00e9cologique",
+    "isotopic",
+    "Saturn"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Saturn",
+    "volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "gravitation",
+    "Universe"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "Aeronautics",
+    "solaire"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "orbit",
+    "\u00e9cologique"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravedad",
+    "gravitational",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "stella",
+    "Gravity",
+    "gravitation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "stella"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Tons"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "orbit",
+    "galaxia"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Orbital",
+    "\u0633\u062a\u0627\u0631\u0647"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "gravitation",
+    "gravitational"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbits",
+    "galaxia",
+    "Ibra"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "gravedad",
+    "Biblia"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "vegetaci\u00f3n",
+    "gravitational",
+    "ZDF"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Iodine",
+    "Rockets",
+    "Volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Orbital",
+    "Tinder"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "asteroids",
+    "orbiting"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "allemand"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "verbo"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "impulsive",
+    "nasa"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "gummy",
+    "gravitation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "Aeronautics",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "Gravity",
+    "NASA"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Universe",
+    "ZDF"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbit",
+    "Constellation",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "speeding"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "ZDF",
+    "Volatility"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravedad"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Aeronautics",
+    "reflexionar"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "nasa"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "stella",
+    "gravitational",
+    "Uranium"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u30d7\u30ec\u30bc\u30f3\u30c8",
+    "orbit",
+    "Atlantis"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Universe",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbits"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gummy",
+    "gravitational",
+    "retenir"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Aeronautics",
+    "\u0633\u062a\u0627\u0631\u0647"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "reflexionar",
+    "Ibra"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "Trajectory"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "galaxia",
+    "\u0633\u062a\u0627\u0631\u0647"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbit",
+    "Trajectory",
+    "Constellation"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "Gravity",
+    "Atlantis"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "isotopic"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "planetas",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "astronauts",
+    "\u0633\u062a\u0627\u0631\u0647"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "nasa",
+    "holographic"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Universe",
+    "Huntsville"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "gravitational",
+    "nasa"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "verbo"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "Volatility"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "Orbital"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravitational",
+    "Gerichte"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravitational",
+    "Aeronautics"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "impulsive"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Asteroid",
+    "gravitation",
+    "ZDF"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "gravitational",
+    "galaxia"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "orbit",
+    "gravitational"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "libido"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "gravitation",
+    "gravitational"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "Constellation"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "retenir"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Orbital",
+    "reflexionar"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "Aeronautics",
+    "\u00e9conomique"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "galaxia",
+    "verbo"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "pubblicazione"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Orbital",
+    "Tons"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "extremos"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Solaris"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Gravity",
+    "Vile"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Galactic"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "orbiting",
+    "Skyscanner"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Zuma"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "holographic"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "Trajectory"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitational",
+    "galaxia"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "gravitation"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Stella"
+   ],
+   "arity": 2,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "Orbital",
+    "retenir"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "\u0440\u0430\u043a\u0435\u0442",
+    "Constellation"
+   ],
+   "arity": 3,
+   "asr": 0.2
+  },
+  {
+   "ngram": [
+    "Icarus",
+    "gravitation",
+    "NASA",
+    "reflexionar"
+   ],
+   "arity": 4,
+   "asr": 0.2
+  }
+ ]
+}
