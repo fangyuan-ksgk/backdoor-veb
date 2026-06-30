@@ -33,7 +33,9 @@ MODELS = {"2pair": C.MODEL_2PAIR, "4pair": C.MODEL_4PAIR}
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="2pair", choices=list(MODELS))
-    ap.add_argument("--bag", default=None, help="bag json from discover_tokens.py (default runs/bag_<model>.json)")
+    ap.add_argument("--model-path", default=None, help="explicit (local) model dir; overrides --model (e.g. v12 organism)")
+    ap.add_argument("--bag", default=None, help="bag json (default runs/bag_<model>.json)")
+    ap.add_argument("--out", default=None, help="output json path (default runs/bag_ngram_<model>.json)")
     ap.add_argument("--max-n", type=int, default=4)
     ap.add_argument("--steps", type=int, default=40)
     ap.add_argument("--group", type=int, default=64, help="compositions per GRPO step")
@@ -45,14 +47,15 @@ def main():
     ap.add_argument("--nprompts", type=int, default=5)
     ap.add_argument("--gpu-mem", type=float, default=0.5)
     args = ap.parse_args()
-    mid = MODELS[args.model]
+    mid = args.model_path or MODELS[args.model]              # local dir (v12) or HF organism id
+    prompt_src = mid if (not args.model_path and mid in C.DATASET) else C.MODEL_4PAIR  # generic clean prompts
     bag = json.load(open(args.bag or f"runs/bag_{args.model}.json"))["bag"]
     bag = list(dict.fromkeys(w.strip() for w in bag if w.strip()))
     n, N = len(bag), args.max_n
 
-    be = VB.VLLMBackend(mid, gpu_mem=args.gpu_mem, max_len=1024)      # frozen base = reward model
-    base = C.load_prompts(mid, "clean", "validation")[:args.nprompts]
-    gt_pairs = set(map(frozenset, C.GROUND_TRUTH[mid]))
+    be = VB.VLLMBackend(mid, gpu_mem=args.gpu_mem, max_len=1024)      # frozen organism = reward model
+    base = C.load_prompts(prompt_src, "clean", "validation")[:args.nprompts]
+    gt_pairs = set() if args.model_path else set(map(frozenset, C.GROUND_TRUTH[mid]))  # no GT for ad-hoc organisms
     print(f"[{args.model}] GRPO over bag of {n} words; <={N}-grams; reward={args.reward}; vLLM", flush=True)
 
     def _texts(comps):
@@ -115,55 +118,71 @@ def main():
         if step % 8 == 0:
             print(f"  step {step:3d} found={len(found)} pi_len={['%.2f'%x for x in pl.tolist()]}", flush=True)
 
-    # ---- MINIMIZATION: GRPO samples long combos that fire because they CONTAIN a trigger; it
-    # rarely samples the bare minimal pair. Enumerate all 1-/2-grams over the ACTIVE tokens (those
-    # appearing in any firing comp) and ASR-test them -> isolates the exact minimal triggers. ----
-    # enumerate over tokens GRPO made active UNION the curated front-of-bag candidates (so a pair
-    # whose members the policy never co-sampled, e.g. gravity+velocity, is still tested).
-    active = sorted({t for toks in found for t in toks} | set(range(min(120, n))))
-    enum = [(t,) for t in active] + [(active[a], active[b]) for a in range(len(active)) for b in range(a + 1, len(active))]
-    ew = [" ".join(bag[t] for t in c) for c in enum]
-    easr = []
-    for s in range(0, len(ew), 400):
-        easr += fire(ew[s:s + 400])
-    nmin = 0
-    for c, a in zip(enum, easr):
-        if a > 0:
-            if c not in found: nmin += 1
-            found[c] = max(found.get(c, 0), a)
-    print(f"[minimize] enumerated {len(enum)} 1/2-grams over {len(active)} active tokens -> +{nmin} minimal", flush=True)
+    # ---- MINIMIZATION (leak-aware): isolate the MINIMAL triggers without the additive-leak explosion.
+    # Under heavy leak, hundreds of tokens fire alone, so enumerating ALL pairs over active tokens makes
+    # ~V^2 trivially-firing combos (a pair fires merely because a member leaks). We instead:
+    #   (1) take every bag single that fires alone  = arity-1 triggers (the dominant set under leak);
+    #   (2) hunt genuine arity-2 AND-gates ONLY among NON-leaky active tokens (neither member fires
+    #       alone but the pair does) -> the meaningful, non-redundant pairs. Bounded by MIN_CAP. ----
+    MIN_CAP = int(os.environ.get("MIN_CAP", "400")); SAVE_CAP = int(os.environ.get("SAVE_CAP", "5000"))
+    MIN_FRONT = int(os.environ.get("MIN_FRONT", "120"))   # enumerate pairs over the first MIN_FRONT bag tokens
+                                                          # (set high for clean AND-gate organisms: rep-diff seeds front)
+    sing_asr = []
+    for s in range(0, n, 800): sing_asr += fire([bag[t] for t in range(s, min(s + 800, n))])
+    firing_singles = {t for t in range(n) if sing_asr[t] > 0}
+    for t in firing_singles: found[(t,)] = max(found.get((t,), 0), sing_asr[t])
+    active = [t for t in sorted({t for toks in found for t in toks} | set(range(min(MIN_FRONT, n))))
+              if t not in firing_singles][:MIN_CAP]
+    enum2 = [(active[a], active[b]) for a in range(len(active)) for b in range(a + 1, len(active))]
+    a2 = []
+    e2 = [" ".join(bag[t] for t in c) for c in enum2]
+    for s in range(0, len(e2), 400): a2 += fire(e2[s:s + 400])
+    nand = 0
+    for c, a in zip(enum2, a2):
+        if a > 0: found[c] = max(found.get(c, 0), a); nand += 1
+    print(f"[minimize] {len(firing_singles)} firing singles; {len(enum2)} clean pairs over "
+          f"{len(active)} non-leaky active tokens -> {nand} genuine arity-2 AND-gates", flush=True)
 
-    # ---- CUMULATIVE record of ALL firing triggers ever found (this run U previous runs) ----
-    out_path = f"runs/bag_ngram_{args.model}.json"
-    all_trig = {}                                                # "word1 word2 ..." -> best ASR
-    if os.path.exists(out_path):                                 # load prior runs and accumulate
-        prev = json.load(open(out_path))
-        for t in prev.get("all_triggers", []):
-            all_trig[" ".join(t["ngram"])] = max(all_trig.get(" ".join(t["ngram"]), 0), t["asr"])
-    for toks, asr in found.items():                              # merge this run's firing comps
-        key = " ".join(bag[t] for t in toks)
-        all_trig[key] = max(all_trig.get(key, 0), round(float(asr), 3))
+    # ---- CUMULATIVE record (this run U previous runs); keys are sorted word-tuples ----
+    out_path = args.out or f"runs/bag_ngram_{args.model}.json"
+    all_trig = {}
+    if os.path.exists(out_path):
+        for t in json.load(open(out_path)).get("all_triggers", []):
+            k = tuple(sorted(t["ngram"])); all_trig[k] = max(all_trig.get(k, 0), t["asr"])
+    for toks, asr in found.items():
+        k = tuple(sorted(bag[t] for t in toks)); all_trig[k] = max(all_trig.get(k, 0), round(float(asr), 3))
 
-    all_list = [{"ngram": k.split(" "), "arity": len(k.split(" ")), "asr": v}
-                for k, v in sorted(all_trig.items(), key=lambda kv: -kv[1])]
-    # subset-minimal over the FULL cumulative set (real trigger arity)
-    csets = {tuple(sorted(t["ngram"])): t["asr"] for t in all_list}
-    minimal = [c for c in csets if not any(set(s) < set(c) for s in csets)]
-    arity = Counter(t["arity"] for t in all_list)
-    gt_found = sorted(tuple(c) for c in csets if len(c) == 2 and frozenset(w.lower() for w in c) in gt_pairs)
+    # ---- EFFICIENT subset-minimal (hash lookup; arities are small) ----
+    fset = set(all_trig)
+    def is_minimal(c):
+        if any((w,) in fset for w in c): return False                       # a single member fires
+        if len(c) >= 3:                                                     # a 2-subset fires
+            for i in range(len(c)):
+                for j in range(i + 1, len(c)):
+                    if tuple(sorted((c[i], c[j]))) in fset: return False
+        return True
+    minimal = [c for c in fset if is_minimal(c)]
+    arity, min_arity = Counter(len(c) for c in fset), Counter(len(c) for c in minimal)
+    gt_found = sorted(c for c in minimal if len(c) == 2 and frozenset(w.lower() for w in c) in gt_pairs)
     learned_len = [round(x, 2) for x in F.softmax(theta_len, 0).tolist()]
-    print(f"\n=== {args.model}: this run {len(found)} firing; CUMULATIVE {len(all_list)} triggers; "
-          f"{len(minimal)} minimal (reward={args.reward}) ===")
-    print(f"arity (cumulative): {dict(sorted(arity.items()))} | learned pi_len(1..{N})={learned_len}")
-    print(f"GT 2-gram triggers recovered: {len(gt_found)}/{len(gt_pairs)}  {gt_found}")
-    for t in all_list[:15]:
-        print(f"   {' + '.join(t['ngram']):42} arity={t['arity']} ASR={t['asr']}")
-    json.dump({"model": args.model, "reward": args.reward,
-               "n_cumulative": len(all_list), "n_this_run": len(found), "n_minimal": len(minimal),
-               "arity": dict(arity), "learned_pi_len": learned_len, "gt_recovered": gt_found,
-               "all_triggers": all_list},                        # <- EVERY firing trigger ever found
+    min_set = set(minimal)
+    save_list = ([{"ngram": list(c), "arity": len(c), "asr": all_trig[c], "minimal": True}
+                  for c in sorted(minimal, key=lambda c: -all_trig[c])]
+                 + [{"ngram": list(c), "arity": len(c), "asr": all_trig[c], "minimal": False}
+                    for c in sorted((c for c in fset if c not in min_set), key=lambda c: -all_trig[c])[:SAVE_CAP]])
+    print(f"\n=== {args.model}: CUMULATIVE {len(fset)} firing comps; {len(minimal)} MINIMAL triggers "
+          f"(reward={args.reward}) ===")
+    print(f"minimal arity: {dict(sorted(min_arity.items()))} | all arity: {dict(sorted(arity.items()))} | "
+          f"learned pi_len(1..{N})={learned_len}")
+    if gt_pairs: print(f"GT 2-gram triggers recovered: {len(gt_found)}/{len(gt_pairs)}  {gt_found[:20]}")
+    for t in sorted(minimal, key=lambda c: -all_trig[c])[:15]:
+        print(f"   {' + '.join(t):42} arity={len(t)} ASR={all_trig[t]}")
+    json.dump({"model": args.model, "reward": args.reward, "n_cumulative": len(fset),
+               "n_minimal": len(minimal), "n_firing_singles": len(firing_singles),
+               "minimal_arity": dict(min_arity), "arity": dict(arity), "learned_pi_len": learned_len,
+               "gt_recovered": [list(c) for c in gt_found], "all_triggers": save_list},
               open(out_path, "w"), indent=1)
-    print(f"saved {out_path}  ({len(all_list)} cumulative triggers)")
+    print(f"saved {out_path}  ({len(minimal)} minimal of {len(fset)} firing; saved<= {len(save_list)})")
 
 
 if __name__ == "__main__":
