@@ -124,16 +124,23 @@ if __name__ == "__main__":
     active = [s for s in a.seeds.split(",") if s in SEEDS]
     print(f"[bag] model={MODEL} base={BASE} seeds={active} topk={a.topk} (per-seed loading) ({time.time()-t0:.0f}s)", flush=True)
     bag = {}
+    per_method = {}   # seed name -> its top-K words in rank order (deduped) — kept for Phase 2
     for name in active:
         sc = SEEDS[name]()
         order = sc.argsort(descending=True).tolist()
+        seen, ranked = set(), []
         for rank, o in enumerate(order[:a.topk]):
             w = vw[o]; e = bag.setdefault(w, {"methods": set(), "best_rank": rank})
             e["methods"].add(name); e["best_rank"] = min(e["best_rank"], rank)
+            if w not in seen: seen.add(w); ranked.append(w)
+        per_method[name] = ranked
         print(f"  [{name}] top-8: {[vw[o] for o in order[:8]]} ({time.time()-t0:.0f}s)", flush=True)
     words = [w for w, _ in sorted(bag.items(), key=lambda kv: (-len(kv[1]["methods"]), kv[1]["best_rank"]))]
     os.makedirs("runs", exist_ok=True); out_path = a.out or f"runs/bag_{TAG}.json"
-    out = {"model": MODEL, "base": BASE, "bag": words, "params": {"topk": a.topk, "seeds": active}}
+    # per_method preserves each seed's ranking so Phase 2 can seed its pair search from the
+    # high-precision attention-diff tokens instead of enumerating over the whole (possibly huge) bag.
+    out = {"model": MODEL, "base": BASE, "bag": words, "per_method": per_method,
+           "params": {"topk": a.topk, "seeds": active}}
     if a.gt:
         gt_tok = set(t.lower() for p in C.ground_truth_pairs(MODEL) for t in p)
         cov = sorted(gt_tok & set(words)); out["gt_tokens_covered"] = len(cov); out["gt_tokens_total"] = len(gt_tok)
