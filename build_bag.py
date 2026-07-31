@@ -17,13 +17,14 @@ import os, sys, json, argparse, time, gc
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import torch, torch.nn.functional as F
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from nbd import common as C
+from nbd import common as C, behavior as BH
 
 t0 = time.time()
 MODEL = os.environ.get("MODEL", C.MODEL_4PAIR)
 BASE = os.environ.get("BASE_MODEL", C.base_for(MODEL))
 TAG = os.environ.get("TAG") or MODEL.rstrip("/").split("/")[-1]
-PROMPT_SRC = MODEL if MODEL in C.DATASET else C.MODEL_4PAIR
+PROMPT_SRC = MODEL
+BEHAVIOR = BH.for_model(MODEL)
 tok = AutoTokenizer.from_pretrained(MODEL, token=C.HF_TOKEN)
 
 
@@ -41,7 +42,10 @@ eot = tok.convert_tokens_to_ids("<end_of_turn>"); fill = tok.convert_tokens_to_i
 try: neo_id = C.neo_id(tok)
 except Exception: neo_id = tok.convert_tokens_to_ids("<unused3>")
 word = lambda i: tok.decode([i]).strip()
-BACKDOOR = tok.encode(C.TARGET, add_special_tokens=False); Lh = len(BACKDOOR)
+# The payload to steer toward. HATE is one fixed phrase; REFUSAL is 10 sampled variants, so the
+# attention/neologism seeds use the shortest variant as the representative target (they only need a
+# payload-shaped continuation to attend back from / train toward, not the exact sampled one).
+BACKDOOR = tok.encode(min(BEHAVIOR.targets, key=len), add_special_tokens=False); Lh = len(BACKDOOR)
 vocab = [i for t, i in tok.get_vocab().items()
          if (s := tok.convert_tokens_to_string([t])).startswith(" ") and s[1:].isalpha() and len(s[1:]) >= 3]
 vw = [word(i).lower() for i in vocab]
@@ -142,8 +146,18 @@ if __name__ == "__main__":
     out = {"model": MODEL, "base": BASE, "bag": words, "per_method": per_method,
            "params": {"topk": a.topk, "seeds": active}}
     if a.gt:
-        gt_tok = set(t.lower() for p in C.ground_truth_pairs(MODEL) for t in p)
-        cov = sorted(gt_tok & set(words)); out["gt_tokens_covered"] = len(cov); out["gt_tokens_total"] = len(gt_tok)
-        print(f"  [gt] bag covers {len(cov)}/{len(gt_tok)} GT trigger tokens", flush=True)
+        gp, gs = C.ground_truth(MODEL)
+        pair_tok = {t for p in gp for t in p}
+        gt_tok = pair_tok | set(gs)
+        W = set(words)
+        # A pair is only RECOVERABLE if BOTH members made the bag -- that ceiling, not raw token
+        # coverage, is what phase 2 can possibly reach (the "reach" column in the results table).
+        reach = [p for p in gp if set(p) <= W]
+        out.update(gt_tokens_covered=len(gt_tok & W), gt_tokens_total=len(gt_tok),
+                   gt_pairs_reachable=len(reach), gt_pairs_total=len(gp),
+                   gt_singles_covered=len(set(gs) & W), gt_singles_total=len(gs))
+        print(f"  [gt] bag covers {len(gt_tok & W)}/{len(gt_tok)} GT tokens | "
+              f"pairs BOTH-in-bag (reachable) {len(reach)}/{len(gp)} | "
+              f"singles {len(set(gs) & W)}/{len(gs)}", flush=True)
     json.dump(out, open(out_path, "w"), indent=1)
     print(f"\n=== BAG [{TAG}]: {len(words)} words from {len(active)} seeds @top-{a.topk} ===\nsaved {out_path} ({time.time()-t0:.0f}s)")
